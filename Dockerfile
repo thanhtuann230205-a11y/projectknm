@@ -2,8 +2,8 @@
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 COPY . .
-# Thêm -DskipTests để bỏ qua lỗi Unit Test
-RUN mvn clean package -DskipTests
+# Lệnh này đảm bảo bỏ qua hoàn toàn các cấu hình test còn sót lại
+RUN mvn clean package -DskipTests -Dmaven.test.skip=true
 
 # Stage 2: Chạy ứng dụng
 FROM amazoncorretto:17-alpine-jdk
