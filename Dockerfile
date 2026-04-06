@@ -1,10 +1,12 @@
-# Stage 1: Build với Maven
+# Stage 1: Build dự án
 FROM maven:3.8.5-openjdk-17 AS build
+WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-# Stage 2: Chạy ứng dụng Java
-FROM openjdk:17-jdk-slim
-COPY --from=build /target/*.jar app.jar
+# Stage 2: Chạy ứng dụng (Dùng image chuẩn của Amazon Corretto)
+FROM amazoncorretto:17-alpine-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
