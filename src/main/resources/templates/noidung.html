@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội dung - Nhóm 12</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: #f1f5f9;
+            position: relative;
+        }
+
+        /* Hiệu ứng nền động giống trang chủ */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.08), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Navbar giống hệt trang chủ */
+        .navbar {
+            background: rgba(15, 23, 42, 0.75) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.8rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(120deg, #e0f2fe, #7dd3fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            letter-spacing: -0.5px;
+        }
+
+        .btn-custom {
+            background: linear-gradient(95deg, #0ea5e9, #3b82f6);
+            color: white;
+            border-radius: 40px;
+            padding: 8px 24px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(95deg, #0284c7, #2563eb);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+            color: white;
+        }
+
+        /* Container nội dung chính */
+        .content {
+            margin-top: 100px;
+            max-width: 950px;
+        }
+
+        /* Style tiêu đề giống section-title của trang chủ */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #0ea5e9, #3b82f6);
+            border-radius: 3px;
+        }
+
+        /* Style cho đoạn văn */
+        p {
+            font-size: 1rem;
+            line-height: 1.75;
+            text-align: justify;
+            margin-bottom: 1.2rem;
+            color: #e2e8f0;
+        }
+
+        /* Khung phân vai */
+        .role-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 1.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .role-box b {
+            color: #7dd3fc;
+            font-weight: 600;
+        }
+
+        .role-box .role-group {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer đồng bộ */
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .btn-custom {
+                padding: 6px 18px;
+                font-size: 0.9rem;
+            }
+            .content {
+                margin-top: 80px;
+                padding: 0 1.2rem;
+            }
+            p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR - Giống hệt trang chủ -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">NHÓM 12</a>
+        <div>
+            <a class="btn btn-custom me-2" href="/">Trang chủ</a>
+            <a class="btn btn-custom me-2" href="/noidung">Nội dung</a>
+            <a class="btn btn-custom" href="/video">Video</a>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENT - Giữ nguyên 100% nội dung chữ -->
+<div class="container content">
+    
+    <!-- NỘI DUNG CHÍNH -->
+    <h2 class="section-title"><i class="bi bi-journal-text me-2"></i>Nội dung chính</h2>
+
+    <p>
+        Linh là một sinh viên năm 4 của đại học Bách Khoa Hà Nội. Trước đây hồi học cấp 3 Linh là một học sinh xuất sắc, thành tích luôn thuộc hàng đầu của lớp. Nhờ đó Linh đã thi đỗ vào một ngôi trường đại học danh giá của thủ đô.
+    </p>
+
+    <p>
+        Phải rời xa gia đình ở quê để lên Hà Nội học, cũng chính từ đây, cuộc sống của Linh rẽ sang một trang khác. Lần đầu tiên trong đời thoát khỏi vòng tay bao bọc, quản lý của cha mẹ, Linh dần bị cuốn vào những cám dỗ nơi đất khách quê người: Linh thường xuyên tụ tập đi chơi với bạn bè nhiều hơn, những cuộc ăn chơi thậm chí kéo dài xuyên đêm, ở những địa điểm mà trước đây Linh chưa từng bước chân vào như những quán bar, thậm chí là những thú vui mà ngày trước Linh chưa bao giờ dám động vào như bóng cười, shisha thì nay chúng như một phần không thể tách rời với Linh…
+    </p>
+
+    <p>
+        Cũng vì thế mà việc học của Linh ngày càng trở nên sa sút, số lần Linh xuất hiện trên lớp trong một kỳ chỉ đếm trên đầu ngón tay, bảng điểm thì chỉ toàn những điểm F, hậu quả là Linh đã bị nhà trường cảnh cáo học tập mức 3 - mức độ cảnh cáo gần cao nhất và chỉ cần Linh trượt thêm những môn khác thì Linh sẽ bị đuổi học.
+    </p>
+
+    <p>
+        Thậm chí khi đó Linh còn nảy sinh quan hệ với một bạn trai và khoảng một thời gian sau đấy Linh phát hiện mình đã có bầu. Linh đem chuyện này nói với bạn trai thì bạn trai Linh tỏ thái độ chối bỏ trách nhiệm - khoảnh khắc đó Linh như gục ngã.
+    </p>
+
+    <p>
+        Bị những áp lực từ việc học tập và việc đang mang thai, cộng với những lo sợ rằng nếu để bố mẹ mình biết được thì mọi chuyện sẽ vỡ tung đè nén, nên kể từ đó Linh bắt đầu rơi vào trầm cảm.
+    </p>
+
+    <p>
+        Và đến một ngày khi không còn nghĩ ra một con đường nào khác thì Linh đã nghĩ tới chuyện tự vẫn để giải thoát cho bản thân nhưng với bản năng của một người mẹ khi nghĩ tới con mình mà Linh không nỡ.
+    </p>
+
+    <p>
+        Bước ngoặt chỉ xảy ra khi bỗng một ngày bố mẹ Linh bất ngờ xuất hiện để gặp con, họ nói rằng họ đã biết hết mọi chuyện của Linh và nay họ tới đây để ở bên động viên an ủi Linh.
+    </p>
+
+    <p>
+        Có bố mẹ ở bên Linh như trút bỏ mọi gánh nặng, Linh bắt đầu lấy lại tinh thần và làm lại cuộc đời của mình. Một vài năm sau Linh chính thức tốt nghiệp, kiếm được một công việc với thu nhập ổn định, có một đứa con kháu khỉnh và có một người bạn trai mới yêu thương mình cùng với những người thân luôn ở bên ủng hộ mình…
+    </p>
+
+    <p>
+        Khi biết được câu chuyện của Linh, một talkshow do một MC tổ chức đã mời Linh tới để chia sẻ về cuộc đời của mình.
+    </p>
+
+    <!-- PHÂN VAI - Giữ nguyên chữ 100% -->
+    <h2 class="section-title mt-4"><i class="bi bi-people-fill me-2"></i>Phân vai</h2>
+
+    <div class="role-box">
+        <div class="role-group">
+            <b>Nhân vật chính</b><br>
+            Vân trong vai Linh<br>
+            Vinh trong vai MC dẫn chương trình
+        </div>
+        <div class="role-group mt-3">
+            <b>Nhân vật phụ</b><br>
+            Yến trong vai mẹ của Linh<br>
+            Tùng trong vai bố của Linh<br>
+            Anh Tuấn trong vai bạn trai cũ của Linh
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER - Đồng bộ với trang chủ -->
+<div class="footer">
+    <div class="container">
+        <span>© 2025 Nhóm 12 - Báo cáo Kỹ năng mềm</span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
